@@ -39,7 +39,7 @@ type Paths struct {
 	Res                         []*smodels.Page
 }
 
-var froutes Paths
+var fdata Paths
 
 //var froutes = Paths{indx: reverse.Rev("index"),
 //	pages: reverse.Rev("pages"), signin: reverse.Rev("index"),
@@ -169,9 +169,9 @@ func FrontHandler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	froutes.Res = append(froutes.Res, res...)
+	fdata.Res = append(fdata.Res, res...)
 
-	rnd.HTML(w, http.StatusOK, "indexPage", froutes)
+	rnd.HTML(w, http.StatusOK, "indexPage", fdata)
 
 }
 
@@ -203,7 +203,7 @@ func checkErr(err error) {
 
 func main() {
 
-	froutes = Paths{Indx: reverse.Rev("index"),
+	fdata = Paths{Indx: reverse.Rev("index"),
 		Pages: reverse.Rev("pages"), Signin: reverse.Rev("index"),
 		Signon: reverse.Rev("index"), Res: []*smodels.Page{}}
 
