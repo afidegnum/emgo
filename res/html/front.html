@@ -1,0 +1,43 @@
+{{define "indexPage"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - Skeleton Screen</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+<body translate="no">
+<p class="screen-reader-text">the page is loading</p>
+<div class="skeleton-screen">
+    <div class="skeleton-screen__header">
+        <div class="skeleton-screen__header-logo">L</div>
+        <div class="skeleton-screen__header-link">A</div>
+        <div class="skeleton-screen__header-link">B</div>
+        <div class="skeleton-screen__header-link">C</div>
+        <div class="skeleton-screen__header-link"></div>
+        <div class="skeleton-screen__header-order-times"></div>
+        <div class="skeleton-screen__header-cart"></div>
+    </div>
+
+    {{range .Path . }}
+        <div class="item">
+            <h3 class="name">{{.Indx}}</h3>
+        </div>
+    {{end}}
+    <div class="skeleton-screen__main">
+        <div class="skeleton-screen__main-nav"></div>
+        <div class="skeleton-screen__main-content">
+            <div class="skeleton-screen__search">
+                <div class="skeleton-screen__search-input"></div>
+                <div class="skeleton-screen__search-button"></div>
+            </div>
+            <div class="skeleton-screen__main-header">A</div>
+            <div class="skeleton-screen__main-header-content">A</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{{end}}

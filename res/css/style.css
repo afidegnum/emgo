@@ -1,0 +1,150 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+/* #Basic Styles
+================================================== */
+body {
+    background: #c5c5c5; /* background: $white; */
+    font: 14px/21px Helvetica, Arial, sans-serif;
+    color: #000000;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+.screen-reader-text {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px,1px,1px,1px);
+}
+.skeleton-screen {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    position: relative;
+}
+.skeleton-screen__shimmer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-image: linear-gradient(to right, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+}
+.skeleton-screen__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+}
+.skeleton-screen__header-logo {
+    width: 113px;
+    height: 40px;
+    margin-right: 60px;
+    background: rgb(225,225,225);
+}
+@keyframes placeHolderShimmer{
+
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+.skeleton-screen__header-link {
+    width: 60px;
+    height: 20px;
+    background: rgb(245,245,245);
+    margin-right: 30px;
+}
+.skeleton-screen__header-order-times {
+    width: 80px;
+    height: 47px;
+    background: rgb(225,225,225);
+    margin-left: auto;
+    border-radius: 4px;
+}
+.skeleton-screen__header-cart {
+    width: 57px;
+    height: 47px;
+    background: rgb(225,225,225);
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.skeleton-screen__main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.skeleton-screen__main-nav {
+    width: 175px;
+    margin-top: 20px;
+    background: rgb(245,245,245);
+}
+.skeleton-screen__main-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.skeleton-screen__search {
+    height: 45px;
+    display: flex;
+}
+.skeleton-screen__search-input {
+    width: 100%;
+    height: 45px;
+    background: #F1F1F1;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.skeleton-screen__search-button {
+    width: 45px;
+    height: 45px;
+    background: rgb(225,225,225);
+    border-radius: 4px;
+}
+.skeleton-screen__main-header {
+    margin-top: 30px;
+    height: 20px;
+    background: rgb(225,225,225);
+    width: 25%;
+}
+
+.skeleton-screen__main-header-content {
+    margin-top: 30px;
+    height: 20px;
+    background: rgb(225,225,225);
+    width: 50%;
+}
+
+
+.skeleton-screen__image {
+    width: 150px;
+    height: auto;
+}
+@keyframes shine {
+    to {
+        background-position:
+                0 0,
+                100% 0, /* move highlight to right */
+                120px 0,
+                120px 40px,
+                120px 80px,
+                120px 120px;
+    }
+}
